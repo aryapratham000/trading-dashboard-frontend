@@ -5,19 +5,21 @@ export default function TopRow({ timestamp, contract, dailyLevels, probs4h, prob
   return (
     <div className="space-y-4">
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-        <div className="flex items-center gap-6">
+        <div className="flex items-center gap-6 min-w-0">
           <h2 className="font-serif font-bold text-xl text-card-foreground">Market Overview</h2>
-          <div className="block sm:flex items-center gap-2 sm:gap-4 text-base">
+          <div className="block sm:flex items-center gap-2 sm:gap-4 text-base min-w-0">
             <div className="flex items-center gap-2">
               <span className="text-muted-foreground">Time:</span>
               <Badge variant="outline" className="font-mono text-sm">
                 {timestamp ?? "—"}
               </Badge>
             </div>
-            <div className="flex items-center gap-2">
-              <span className="text-muted-foreground">Contract:</span>
-              <Badge variant="secondary" className="font-mono font-semibold text-sm">
-                {contract ?? "—"}
+            <div className="flex items-center gap-2 min-w-0">
+              <span className="text-muted-foreground hidden sm:inline">Contract:</span>
+              <Badge variant="secondary" className="font-mono font-semibold text-sm overflow-hidden">
+                <span className="truncate block max-w-[70vw] sm:max-w-none" title={contract ?? "—"}>
+                  {contract ?? "—"}
+                </span>
               </Badge>
             </div>
           </div>
