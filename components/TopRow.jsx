@@ -7,7 +7,7 @@ export default function TopRow({ timestamp, contract, dailyLevels, probs4h, prob
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div className="flex items-center gap-6">
           <h2 className="font-serif font-bold text-xl text-card-foreground">Market Overview</h2>
-          <div className="flex items-center gap-4 text-base">
+          <div className="block sm:flex items-center gap-2 sm:gap-4 text-base">
             <div className="flex items-center gap-2">
               <span className="text-muted-foreground">Time:</span>
               <Badge variant="outline" className="font-mono text-sm">
