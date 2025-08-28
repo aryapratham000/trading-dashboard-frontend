@@ -14,7 +14,7 @@ export default function TopRow({ timestamp, contract, dailyLevels, probs4h, prob
                 {timestamp ?? "—"}
               </Badge>
             </div>
-            <div className="block sm:flex flex items-center gap-2">
+            <div className="block sm:flex flex items-center gap-1">
               <span className="text-muted-foreground">Contract:</span>
               <Badge variant="secondary" className="font-mono font-semibold text-sm">
                 {contract ?? "—"}
