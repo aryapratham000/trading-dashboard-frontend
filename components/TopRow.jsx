@@ -35,7 +35,7 @@ export default function TopRow({ timestamp, contract, dailyLevels, probs4h, prob
             <div className="flex items-center justify-center py-6">
               <div className="flex items-center gap-2 text-muted-foreground">
                 <div className="h-4 w-4 border-2 border-primary border-t-transparent rounded-full animate-spin"></div>
-                <span>Loading market data...</span>
+                <span>Waking up server (May take upto 1min)</span>
               </div>
             </div>
           ) : (
