@@ -8,13 +8,6 @@ export default function TopRow({ timestamp, contract, dailyLevels, probs4h, prob
         <div className="flex items-center gap-6">
           <div className="flex items-center gap-3">
             <h2 className="font-serif font-bold text-xl text-card-foreground">Market Overview</h2>
-            <div className={`px-2 py-1 rounded-full text-xs font-medium ${
-              marketStatus?.is_open 
-                ? 'bg-accent/20 text-accent border border-accent/30' 
-                : 'bg-destructive/20 text-destructive border border-destructive/30'
-            }`}>
-              {marketStatus?.is_open ? 'Open' : 'Closed'}
-            </div>
           </div>
           <div className="block sm:flex items-center gap-1 sm:gap-5 text-base">
             <div className="flex items-center gap-2">
