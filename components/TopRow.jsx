@@ -2,7 +2,11 @@ import { Badge } from "@/components/ui/badge"
 import SentimentGauge from "./SentimentGauge"
 
 export default function TopRow({ timestamp, contract, dailyLevels, probs4h, probs1h, marketStatus }) {
-          </div>
+  return (
+    <div className="space-y-4">
+      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 bg-gradient-to-r from-card/50 to-card/30 rounded-lg p-4 border border-border/50 backdrop-blur-sm relative overflow-hidden">
+        <div className="absolute inset-0 opacity-5 bg-[radial-gradient(ellipse_at_top_left,rgba(255,255,255,0.1),transparent_50%)]"></div>
+        <div className="relative z-10 flex-grow">
           <div className="block sm:flex items-center gap-1 sm:gap-5 text-base">
             <div className="flex items-center gap-2">
               <span className="text-muted-foreground">Time:</span>
