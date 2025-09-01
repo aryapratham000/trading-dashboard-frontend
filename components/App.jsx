@@ -173,6 +173,48 @@ export default function App() {
         </div>
       )}
 
+      {/* Market Closed Overlay */}
+      {!marketStatus.is_open && (
+        <div className="fixed inset-0 bg-background/95 backdrop-blur-md z-50 flex items-center justify-center">
+          <div className="text-center space-y-6 max-w-md mx-auto p-8">
+            <div className="space-y-4">
+              <div className="w-20 h-20 mx-auto rounded-full bg-muted/50 border-2 border-border flex items-center justify-center">
+                <div className="w-8 h-8 rounded-full bg-destructive/20 flex items-center justify-center">
+                  <div className="w-3 h-3 rounded-full bg-destructive"></div>
+                </div>
+              </div>
+              <div className="space-y-2">
+                <h2 className="font-serif font-bold text-2xl text-foreground">Market Closed</h2>
+                <p className="text-muted-foreground">
+                  The ES Futures market is currently closed. Live data will resume when the market reopens.
+                </p>
+              </div>
+            </div>
+            
+            {marketStatus.next_open && (
+              <div className="bg-card/50 rounded-lg p-4 border border-border backdrop-blur-sm">
+                <div className="text-sm text-muted-foreground mb-1">Next Market Open</div>
+                <div className="font-mono font-semibold text-primary">
+                  {new Date(marketStatus.next_open).toLocaleString('en-US', {
+                    weekday: 'short',
+                    month: 'short',
+                    day: 'numeric',
+                    hour: '2-digit',
+                    minute: '2-digit',
+                    timeZoneName: 'short'
+                  })}
+                </div>
+              </div>
+            )}
+            
+            <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
+              <div className="h-2 w-2 rounded-full bg-destructive animate-pulse"></div>
+              <span>Waiting for market to open...</span>
+            </div>
+          </div>
+        </div>
+      )}
+
       <header className="sticky top-0 z-50 border-b border-border bg-card/95 backdrop-blur supports-[backdrop-filter]:bg-card/60">
         <div className="container mx-auto px-6 py-3">
           <div className="flex items-center justify-between">
