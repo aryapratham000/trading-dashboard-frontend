@@ -42,7 +42,7 @@ export default function App() {
 
   // Open WebSocket
   useEffect(() => {
-    const ws = new WebSocket("wss://render-backend-pl2s.onrender.com");
+    const ws = new WebSocket("wss://render-backend-pl2s.onrender.com/ws/stream");
     wsRef.current = ws
 
     ws.onmessage = (e) => {
