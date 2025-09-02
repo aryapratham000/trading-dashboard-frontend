@@ -7,14 +7,14 @@ import { Analytics } from '@vercel/analytics/react'
 
 const workSans = Work_Sans({
   subsets: ["latin"],
-  display: "swap",
+  //display: "swap",
   variable: "--font-work-sans",
   weight: ["400", "600", "700"],
 })
 
 const openSans = Open_Sans({
   subsets: ["latin"],
-  display: "swap",
+ // display: "swap",
   variable: "--font-open-sans",
   weight: ["400", "500", "600"],
 })
