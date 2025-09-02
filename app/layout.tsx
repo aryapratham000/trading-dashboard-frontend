@@ -2,6 +2,8 @@ import type React from "react"
 import type { Metadata } from "next"
 import { Work_Sans, Open_Sans } from "next/font/google"
 import "./globals.css"
+import { Analytics } from '@vercel/analytics/react'
+
 
 const workSans = Work_Sans({
   subsets: ["latin"],
@@ -34,6 +36,7 @@ export default function RootLayout({
         className={`font-sans ${workSans.variable} ${openSans.variable} antialiased dark bg-background text-foreground`}
       >
         {children}
+        <Analytics /> 
       </body>
     </html>
   )
