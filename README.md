@@ -2,7 +2,7 @@
 
 Built with the help of v0.app to streamline development and deployment.
 
-A sleek, modern frontend for a trading dashboard—powered by Next.js, TypeScript, Tailwind CSS, and deployed on Vercel. 
+A sleek, modern frontend for a trading dashboard—powered by Next.js, TypeScript, Tailwind CSS, and deployed on Vercel. Use here: https://trading-dashboard-frontend-taupe.vercel.app/
 
 ## Project Overview
 
