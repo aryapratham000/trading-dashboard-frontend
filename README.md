@@ -1,30 +1,45 @@
-# Dashboard styling
+# Trading Dashboard Frontend
 
-*Automatically synced with your [v0.app](https://v0.app) deployments*
+Built with the help of v0.app to streamline development and deployment.
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/aryapratham000s-projects/v0-dashboard-styling)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.app-black?style=for-the-badge)](https://v0.app/chat/projects/RE2iHknP9vt)
+A sleek, modern frontend for a trading dashboard—powered by Next.js, TypeScript, Tailwind CSS, and deployed on Vercel. 
 
-## Overview
+## Project Overview
 
-This repository will stay in sync with your deployed chats on [v0.app](https://v0.app).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.app](https://v0.app).
+This frontend is the UI layer for trading-dashboard-backend found at https://github.com/aryapratham000/trading-dashboard-backend, with:
 
-## Deployment
+- **React and TypeScript (via Next.js)** for high-performance and type safety.
+- **Tailwind CSS** for utility-first styling.
+- Hosted on **Vercel**, ensuring global accessibility and fast updates.
 
-Your project is live at:
+## Features
 
-**[https://vercel.com/aryapratham000s-projects/v0-dashboard-styling](https://vercel.com/aryapratham000s-projects/v0-dashboard-styling)**
+- **Top Row Dashboard** → Displays important **daily levels** and a **market sentiment gauge**, providing a quick snapshot of the market’s directional bias.
+- <img width="998" height="450" alt="image" src="https://github.com/user-attachments/assets/c407c537-6ab6-484a-83ed-826e956680be" />
 
-## Build your app
+- **Analytics Card** → Shows the **predicted range** and **current range**, as well as the **time remaining until the next session**.
+- <img width="486" height="160" alt="image" src="https://github.com/user-attachments/assets/c71988a7-1592-4200-86ad-ebcd89b60e7c" />
 
-Continue building your app on:
+- **Regime Probabilities** → Presents probabilities of different session regimes. Each entry has an **info tooltip** (`i`) you can hover over for detailed definitions of the sessions.
+- 
+- **Events** → Dynamically compiled using regime probabilities, giving a **powerful directional alignment tool** to interpret current and upcoming market events.  
+- **Filters** → Allow you to add **nuance and precision** to the analytics, tailoring the view to your specific trading approach.  
 
-**[https://v0.app/chat/projects/RE2iHknP9vt](https://v0.app/chat/projects/RE2iHknP9vt)**
+## File Structure Breakdown
 
-## How It Works
+Here’s how the repository is organized:
+- **app/** → Next.js main app directory (pages, layout, routes)  
+- **components/** → Reusable UI components (e.g. badges, charts, menus)  
+- **lib/** → Utility functions, hooks, and shared logic  
+- **public/** → Static assets (images, icons, favicon)  
+- **styles/** → Global and component-specific CSS/Tailwind configs  
+- **.gitignore** → Files and folders to be excluded from version control  
+- **.npmrc** → NPM configuration (registry, package manager prefs)  
+- **components.json** → UI component metadata (perhaps generated or used by v0.app)  
+- **next.config.mjs** → Next.js configuration file for routing/build tweaks  
+- **package.json** → Project metadata, scripts, and dependencies  
+- **package-lock.json** → Exact dependency versions used in the project  
+- **postcss.config.mjs** → PostCSS configuration for Tailwind processing  
+- **tsconfig.json** → TypeScript compiler settings and path aliases  
+- **README.md** → Project overview (this file)  
 
-1. Create and modify your project using [v0.app](https://v0.app)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
