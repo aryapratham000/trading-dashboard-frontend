@@ -1,7 +1,22 @@
+import { useEffect, useState } from "react"
 import { Badge } from "@/components/ui/badge"
 import SentimentGauge from "./SentimentGauge"
 
 export default function TopRow({ timestamp, contract, dailyLevels, probs4h, probs1h, marketStatus }) {
+  const [countdown, setCountdown] = useState(60)
+
+  useEffect(() => {
+    if (!dailyLevels) {
+      const timer = setInterval(() => {
+        setCountdown((prev) => {
+          return prev > 0 ? prev - 1 : 0
+        })
+      }, 1000)
+
+      return () => clearInterval(timer)
+    }
+  }, [dailyLevels])
+
   return (
     <div className="space-y-4">
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 bg-gradient-to-r from-card/50 to-card/30 rounded-lg p-4 border border-border/50 backdrop-blur-sm relative overflow-hidden">
@@ -35,7 +50,7 @@ export default function TopRow({ timestamp, contract, dailyLevels, probs4h, prob
             <div className="flex items-center justify-center py-6">
               <div className="flex items-center gap-2 text-muted-foreground">
                 <div className="h-4 w-4 border-2 border-primary border-t-transparent rounded-full animate-spin"></div>
-                <span>Waking server (May take upto 1min)</span>
+                <span>Waking server ({countdown}s)</span>
               </div>
             </div>
           ) : (
