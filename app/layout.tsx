@@ -22,7 +22,6 @@ const openSans = Open_Sans({
 export const metadata: Metadata = {
   title: "ES Futures Live Dashboard",
   description: "Professional trading dashboard for ES Futures with real-time data",
-  generator: "v0.app",
 }
 
 export default function RootLayout({
