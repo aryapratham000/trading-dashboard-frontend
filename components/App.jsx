@@ -42,7 +42,7 @@ export default function App() {
 
   // Open WebSocket
   useEffect(() => {
-   const ws = new WebSocket("wss://render-backend-pl2s.onrender.com/ws/stream");
+   const ws = new WebSocket("wss://trading-dashboard-backend-ifo4.onrender.com/ws/stream");
   //  const ws = new WebSocket("wss://entitled-pansie-gridvision-a0a962eb.koyeb.app/ws/stream");
     wsRef.current = ws
 
