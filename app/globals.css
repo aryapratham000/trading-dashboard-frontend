@@ -4,7 +4,6 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Updated to cool technical colors with black background */
   --background: oklch(0.98 0 0); /* Light background for light mode */
   --foreground: oklch(0.15 0 0); /* Dark text */
   --card: oklch(0.97 0 0); /* Light card background */
@@ -43,8 +42,6 @@
 }
 
 .dark {
-  /* Much softer, warmer dark theme that's easier on the eyes */
-  /* Replaced blue tones with warm amber/orange palette for better dark theme */
   --background: oklch(0.05 0.01 60); /* Very dark warm background */
   --foreground: oklch(0.92 0.02 40); /* Soft warm white text */
   --card: oklch(0.06 0.005 60); /* Much more subtle warm cards, barely visible */
@@ -81,7 +78,6 @@
 }
 
 @theme inline {
-  /* Updated font variables to use sophisticated fonts */
   --font-sans: var(--font-work-sans);
   --font-serif: var(--font-open-sans);
   --font-mono: var(--font-geist-mono);
