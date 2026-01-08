@@ -163,7 +163,7 @@ export default function App() {
             
             <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
               <div className="h-2 w-2 rounded-full bg-destructive animate-pulse"></div>
-              <span>Waiting for market to open...</span>
+              <span>Please allow server to cold start (May take upto 3min)</span>
             </div>
           </div>
         </div>
